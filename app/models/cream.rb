@@ -1,0 +1,2 @@
+class Cream < ApplicationRecord
+end

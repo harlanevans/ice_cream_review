@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  flavor_profile: MyString
+  served_in: MyString
+
+two:
+  flavor_profile: MyString
+  served_in: MyString
