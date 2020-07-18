@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import FlavorForm from "./FlavorForm";
+import Toppings from '../toppings/Toppings';
 
 class FlavorView extends React.Component {
   state = { flavor: {}, toggleEdit: false };
@@ -37,15 +38,22 @@ class FlavorView extends React.Component {
   };
 
   render() {
-    const { flavor_profile, served_in } = this.state.flavor;
+    const { flavor_profile, served_in, id } = this.state.flavor;
     return (
       <div>
         <h3>{flavor_profile}</h3> served in <h3>{served_in}</h3>
         {/* {this.state.toggleEdit && <FlavorForm />} */}
-        {this.state.toggleEdit ? <FlavorForm flavor={this.state.flavor} editFlavor={this.editFlavor} toggleEdit={this.toggle}/> : null}
+        {this.state.toggleEdit ? (
+          <FlavorForm
+            flavor={this.state.flavor}
+            editFlavor={this.editFlavor}
+            toggleEdit={this.toggle}
+          />
+        ) : null}
         <button onClick={() => this.toggle()}>
           {this.state.toggleEdit ? "Close Form" : "Edit"}
         </button>
+        <Toppings creamId={this.props.match.params.id} />
       </div>
     );
   }

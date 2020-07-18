@@ -1,5 +1,5 @@
 import React from "react";
-import "../App.css";
+import "../../App.css";
 import Flavor from "./Flavor";
 import FlavorForm from "./FlavorForm";
 import axios from "axios";

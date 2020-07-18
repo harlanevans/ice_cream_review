@@ -1,10 +1,10 @@
 // IMPORTS
 import React from "react";
-import Flavors from "./components/Flavors";
-import FlavorForm from './components/FlavorForm';
+import Flavors from "./components/flavors/Flavors";
+import FlavorForm from './components/flavors/FlavorForm';
 import Home from './components/Home'
 import Navbar from './components/Navbar';
-import FlavorView from './components/FlavorView'
+import FlavorView from './components/flavors/FlavorView'
 
 import { Route, Switch } from 'react-router-dom';
 
